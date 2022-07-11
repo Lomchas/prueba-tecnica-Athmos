@@ -1,0 +1,605 @@
+.container-App-Task {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.178);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .container-head-task {
+    width: 100%;
+
+    .accordion-item {
+      width: 100%;
+      box-shadow: none;
+      border: none;
+
+      .accordion-button {
+        padding: 0.1rem;
+        padding-bottom: 0.5rem;
+        background: rgb(255, 255, 255);
+        border: none;
+        box-shadow: none;
+        outline: none !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+
+        .text-head {
+          width: 90%;
+          display: flex;
+          align-items: center;
+
+          h1 {
+            width: 10%;
+            margin: 0;
+            padding: 1rem;
+            font-size: calc(0.5rem + 1vw);
+            color: rgba(0, 0, 0, 0.329);
+          }
+
+          .instructions {
+            width: 70%;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+            h2 {
+              font-size: calc(0.2rem + 1vw);
+              margin: 0;
+            }
+            p {
+              font-size: calc(0.1rem + 1vw);
+              margin: 0;
+              color: rgba(0, 0, 0, 0.274);
+            }
+          }
+
+          .progress-task {
+            width: 20%;
+
+            .values-progress-task {
+              font-size: calc(0.2rem + 0.8vw);
+              color: rgba(0, 0, 0, 0.301);
+            }
+
+            .progress {
+              background-color: #ecf0f6;
+              height: 10px;
+              border-radius: 50px;
+
+              .progress-bar {
+                background: #718391;
+              }
+            }
+          }
+        }
+      }
+
+      .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300c297'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        transition: all 0.3s ease-in-out;
+      }
+
+      .accordion-body {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+
+        .container-actions-task {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .dropdown {
+            background-color: transparent;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.219);
+            border-radius: 10px;
+
+            button {
+              color: #00c297;
+              font-weight: bold;
+            }
+
+            .dropdown-menu {
+              li {
+                .btn {
+                  width: 100%;
+                }
+                .btn:hover {
+                  background: rgba(0, 0, 0, 0.075);
+                }
+              }
+            }
+          }
+
+          .searcher-task form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            .input-searcher-task {
+              border: 1px solid rgba(0, 0, 0, 0.295);
+              border-radius: 20px;
+              outline: none;
+              text-align: center;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .input-searcher-task::placeholder {
+              color: rgba(0, 0, 0, 0.281);
+            }
+
+            .input-searcher-task:focus {
+              transform: scale(1.05);
+              box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.075);
+            }
+
+            .btn-search {
+              cursor: pointer;
+              background: #00c297;
+              color: white;
+              padding: 0.4rem;
+              border-radius: 50px;
+              border: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.295);
+              transition: all 0.3s ease-in-out;
+            }
+
+            .btn-search:active {
+              transform: scale(0.7);
+            }
+          }
+
+          .btn-add-task {
+            background: #00c297;
+            color: white;
+            width: 140px;
+            padding: 0.2rem;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .container-all-task {
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// ------------- Card-Task ------------//
+
+.container-card-task {
+  width: 100%;
+
+  .accordion{
+    border: none;
+
+    .accordion-button{
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+      border-radius: 0;
+      cursor: pointer;
+      background-color: white;
+      
+
+      .checkBox-task{
+        background: rgb(255, 255, 255);
+        padding: 3px;
+        margin: 0 .7rem 0 0;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(128, 128, 128, 0.445);
+        font-size: calc(.1rem + .8vw);
+        font-weight: bold;
+        color: rgba(128, 128, 128, 0.493);
+      }
+
+      .complete{
+        background-color: rgba(128, 128, 128, 0.582);
+        color: white;
+        border: none;
+      }
+
+      .title-card-task{
+        font-size: calc(.3rem + 1vw);
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.486);
+      }
+
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: white;
+      color: black;
+      box-shadow: none;
+    }
+
+    .accordion-button::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300c297'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    }
+
+    .accordion-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .info-task{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .description-task{
+          font-size: calc(.3rem + 1vw);
+          color: rgba(0, 0, 0, 0.582);
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          padding: .3rem;
+          margin: 0;
+        }
+
+        .container-tags{
+          width: 70%;
+
+          ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: .2rem;
+
+            li{
+              padding: 1px 15px;
+              font-size: calc(3px + 1vw);
+              text-transform: capitalize;
+              border: 1px solid rgba(0, 0, 0, 0.438);
+              border-radius: 50px;
+              color: white;
+              background: #00c297;
+            }
+          }
+        }
+      }
+
+      hr{
+        width: 100%;
+      }
+
+      .container-actions-task{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 0 2rem 0;
+
+        .btn-act{
+          background: rgb(66, 133, 233);
+          color: white;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: .2rem 1rem;
+          text-transform: capitalize;
+          gap: .5rem;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.356);
+          transition: all .3s ease-in-out; 
+        }
+
+        .buttonEdit{
+          background: rgb(66, 133, 233);
+          color: white;
+        }
+
+        .buttonDelete{
+          background: rgb(223, 80, 80);
+          color: white;
+        }
+
+        .buttonComplete{
+          background: #47c787;
+          color: white;
+        }
+
+        .done{
+          background: gray;
+        }
+
+        .btn-act:hover{
+          transform: scale(1.05);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.575);
+          color: rgba(255, 255, 255, 0.582);
+        }
+
+        .btn-act:active{
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+
+//---------- Responsive Container App Task --------//
+
+@media screen and (max-width: 1000px) {
+  .container-App-Task {
+    width: 80%;
+    padding: 1rem;
+    .container-head-task {
+      width: 100%;
+
+      .accordion-item {
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        
+        .accordion-button {
+          padding: 0.1rem;
+          padding-bottom: 0.5rem;
+  
+          .text-head {
+            width: 90%;
+            display: flex;
+            align-items: center;
+  
+            h1 {
+              font-size: calc(0.8rem + 1vw);
+            }
+  
+            .instructions {
+              width: 70%;
+  
+              h2 {
+                font-size: calc(0.4rem + 1vw);
+              }
+              p {
+                font-size: calc(0.2rem + 1vw);
+              }
+            }
+  
+            .progress-task {
+              .values-progress-task {
+                font-size: calc(0.3rem + 0.9vw);
+              }
+  
+              .progress {
+                background-color: #e1e8f3;
+                height: 10px;
+                border-radius: 50px;
+  
+                .progress-bar {
+                  background: #718391;
+                }
+              }
+            }
+          }
+        }
+        .accordion-body {
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+  
+          .container-actions-task {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+  
+            .dropdown {
+              button {
+                color: #00c297;
+                font-weight: bold;
+              }
+  
+              .dropdown-menu {
+                li {
+                  .btn {
+                    width: 100%;
+                  }
+                  .btn:hover {
+                    background: rgba(0, 0, 0, 0.075);
+                  }
+                }
+              }
+            }
+  
+            .searcher-task form {
+              gap: .5rem;
+            }
+  
+            .btn-add-task {
+              width: 120px;
+              padding: 0.2rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .container-all-task {
+      width: 100%;
+      height: 100%;
+      max-height: 100vh;
+    }
+  }
+}
+
+
+
+// -------- Responsive Card Task --------------//
+
+@media screen and (max-width: 1000px){
+  .container-card-task {
+    width: 100%;
+  
+    .accordion{
+      border: none;
+  
+      .accordion-button{
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+        border-radius: 0;
+        cursor: pointer;
+        background-color: white;
+        
+  
+        .checkBox-task{
+          background: rgb(255, 255, 255);
+          padding: 3px;
+          margin: 0 .7rem 0 0;
+          border-radius: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid rgba(128, 128, 128, 0.445);
+          font-size: calc(.1rem + .8vw);
+          font-weight: bold;
+          color: rgba(128, 128, 128, 0.493);
+        }
+  
+        .complete{
+          background-color: rgba(128, 128, 128, 0.582);
+          color: white;
+          border: none;
+        }
+  
+        .title-card-task{
+          font-size: calc(.3rem + 1vw);
+          margin: 0;
+          padding: 0;
+          color: rgba(0, 0, 0, 0.486);
+        }
+  
+      }
+  
+      .accordion-button:not(.collapsed) {
+        background-color: white;
+        color: black;
+        box-shadow: none;
+      }
+  
+      .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300c297'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  
+      }
+  
+      .accordion-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .info-task{
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+  
+          .description-task{
+            font-size: calc(.3rem + 1vw);
+            color: rgba(0, 0, 0, 0.582);
+            line-height: 1.5rem;
+            letter-spacing: 1px;
+            padding: .3rem;
+            margin: 0;
+          }
+  
+          .container-tags{
+            width: 70%;
+  
+            ul{
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              margin: 0;
+              padding: 0;
+              gap: .2rem;
+  
+              li{
+                padding: 1px 15px;
+                font-size: calc(3px + 1vw);
+                text-transform: capitalize;
+                border: 1px solid rgba(0, 0, 0, 0.438);
+                border-radius: 50px;
+                color: white;
+                background: #00c297;
+              }
+            }
+          }
+        }
+  
+        hr{
+          width: 100%;
+        }
+  
+        .container-actions-task{
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 1rem 0 2rem 0;
+  
+          .btn-act{
+            background: rgb(66, 133, 233);
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: .2rem 1rem;
+            text-transform: capitalize;
+            gap: .5rem;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.356);
+            transition: all .3s ease-in-out; 
+          }
+  
+          .buttonEdit{
+            background: rgb(66, 133, 233);
+            color: white;
+          }
+  
+          .buttonDelete{
+            background: rgb(223, 80, 80);
+            color: white;
+          }
+  
+          .buttonComplete{
+            background: #47c787;
+            color: white;
+          }
+  
+          .btn-act:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.575);
+            color: rgba(255, 255, 255, 0.582);
+          }
+  
+          .btn-act:active{
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+  
+}

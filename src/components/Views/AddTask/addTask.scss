@@ -1,0 +1,117 @@
+.container-addTask{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    form{
+        background: white;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 1rem;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.433);
+
+        input, textarea{
+            width: 85%;
+            margin: .5rem 0;
+            transition: all .3s ease-in-out;
+        }
+
+        textarea:focus{
+            transform: scale(1.05);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.473);
+        }
+
+        input:focus{
+            transform: scale(1.05);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.473);    
+        }
+
+        input{
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.226);
+            outline: none;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.226);
+            padding: 0 1rem;
+        }
+
+        textarea{
+            border: 1px solid rgba(0, 0, 0, 0.226);
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.226);
+            outline: none;
+            padding: 1rem;
+        }
+
+        p{
+            width: 100%;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.445);
+            font-size: calc(.6rem + 1vw);
+            margin: .5rem 0 0 0;
+        }
+
+        .btn-addTag{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+            margin-top: 1rem;
+            border-radius: 6px;
+            border: 1px solid rgb(0, 0, 0);
+            color: white;
+            background-color: #00c297;
+            transition: all .3s ease-in-out;
+        }
+
+        .btn-addTag:hover{
+            transform: scale(1.05);
+        }
+
+        .container-tags{
+            width: 90%;
+
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: .5rem;
+                margin: 2rem 0;
+                padding: 0;
+                list-style: none;
+
+                li{
+                    background: #00c297;
+                    padding: .2rem .5rem;
+                    border-radius: 10px;
+                    border: 1px solid black;
+                    color: white;
+                }
+            }
+        }
+
+        .btn-submitAddTask{
+            width: 70%;
+            height: 40px;
+            background: #00c297;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.433);
+            transition: all .3s ease-in-out;
+        }
+
+        .btn-submitAddTask:hover{
+            transform: scale(1.05);
+        }
+
+    }
+}
